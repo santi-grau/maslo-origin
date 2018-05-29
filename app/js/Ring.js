@@ -6,7 +6,7 @@ var Ring = function( id ){
 
 	this.idle = true;
 	this.theta 	= Math.random();
-	this.idleRotationSpeed = ( -0.5 + Math.random() ) / 100;
+	this.idleRotationSpeed = ( -0.5 + Math.random() ) / 500;
 	this.radius 	= 0.9 + Math.random() / 5;
 	this.strokeWidth = 1;
 	this.res 		= r	= 256;
