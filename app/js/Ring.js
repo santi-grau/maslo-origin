@@ -5,7 +5,7 @@ var Ring = function( id ){
 	this.noise = new SimplexNoise( Math.random );
 
 	this.idle = true;
-	this.theta 	= Math.random();
+	this.theta 	= id * 0.01;
 	this.idleRotationSpeed = ( -0.5 + Math.random() ) / 500;
 	this.radius 	= 0.9 + Math.random() / 5;
 	this.strokeWidth = 1;
@@ -73,7 +73,7 @@ Ring.prototype.step = function( time, id, oldPoints ){
 		var alphaNoise = ( this.noise.noise2D( this.seed.x, time ) + 1 ) / 2 * 0.2;
 		this.rimColor1.z = alphaNoise;
 		this.rimColor2.z = alphaNoise;
-		this.theta += this.idleRotationSpeed;
+		// this.theta += this.idleRotationSpeed;
 	}
 
 	for( var i = 0 ; i < this.res ; i++ ){
